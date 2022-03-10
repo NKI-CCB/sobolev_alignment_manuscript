@@ -1,5 +1,11 @@
 # Sobolev Alignment
 
+<b>NOTE</b> We here report the different scripts used to produce the figures of the manuscript entitled <a href="https://www.biorxiv.org/content/10.1101/2022.03.08.483431v1">Identifying commonalities between cell lines and tumors at the single cell level using Sobolev Alignment of deep generative models</a>. We are currently putting efforts into automating the scripts to allow easy reproduction of our results. Such automated scripts are ready for downloading and processing the data, and for reproducing Figure 3. We provide the code for Figure 4-5 but the automation is not finished yet.
+
+## Setting up environment
+
+Different Python and R packages are used to produce our results. You will find the necessary Python packages in requirements.txt.
+
 ## Downloading data
 ### Kim et al 2020
 The tumor dataset (Kim et al 2020, Nature Communications) can be downloaded on GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131907
@@ -22,4 +28,18 @@ Seurat and LIGER are implemented in R packages and their analysis are performed 
 LIGER is a Python package and the complete analysis is in HARMONY_alignment_all_data.ipynb
 
 ### Figure 3
+
+Each model has its own folder. The complete analysis can be run on the Jupyter notebook "results_analysis_model_.." present in the folder, including:
+- Generation of synthetic data.
+- Processing of the data.
+- Sobolev Alignment.
+- Analysis of features and reproduction of Figure 3.
+
+### Figures 4 and 5 (figure_4_5)
+
+<b>NOTE:</B>The scripts supporting this figures have not been fully automated yet and require some minor manual curation.
+1. Run launch_hyperopt_search.sh to compute the Hyperopt parameters for Kim, Kinker and the combined dataset.
+2. Change the optimal scVI parameters in sobolev_alignment/feature_analysis_params.py
+3. Run launch_feature_analysis.sh
+The analysis can then be found in the different notebooks.
 
