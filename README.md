@@ -4,7 +4,14 @@
 
 ## Setting up environment
 
-Different Python and R packages are used to produce our results. You will find the necessary Python packages in requirements.txt.
+Different Python and R packages are used to produce our results. The environment can be created using the following commands:
+```
+conda create --name sobolev_alignment_figures python=3.9
+pip install -r requirements.txt
+```
+To install PyTorch, please refer <a href="https://pytorch.org/get-started/locally/">PyTorch's installation website</a>, and select the version suited to your hardware (especially if you have GPUs).
+To install Sobolev Alignment, <a href="https://github.com/saroudant/sobolev_alignment">please use our implementation on GitHub</a>.
+The R packages we employ are installed in their respective notebooks (specifically for Figures 2 and 3).
 
 ## Downloading data
 ### Kim et al 2020
