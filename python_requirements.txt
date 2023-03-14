@@ -3,7 +3,7 @@ Cython==0.29.25
 h5py==3.5.0
 hyperopt==0.2.6
 ipykernel==6.5.0
-ipython==7.31.1
+ipython==8.10.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
 jedi==0.18.0
